@@ -11,6 +11,7 @@ import { GroupDashboardComponent } from './group-dashboard/group-dashboard.compo
   declarations: [MobileSignComponent, DashboardComponent, GroupidSignComponent, GroupDashboardComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[MobileSignComponent, DashboardComponent, GroupidSignComponent, GroupDashboardComponent]
 })
 export class SingleWalletModule { }

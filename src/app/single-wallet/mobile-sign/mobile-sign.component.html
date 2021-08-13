@@ -1,1 +1,12 @@
-<p>mobile-sign works!</p>
+<form [formGroup]="mobileAuthForm" (ngSubmit)="auth()">
+    <label for="mob">Mobile: </label>
+    <input id="mob" type="text" formControlName="mobile">
+    <ng-container *ngIf="! authFlag">
+        <button (click)="sendOtp()">Send Otp</button>
+    </ng-container>
+    <ng-container *ngIf="authFlag">
+        <label for="otp">OTP: </label>
+        <input id="otp" type="text" formControlName="otp">
+        <button (click)="auth()">Authenticate</button>
+    </ng-container>
+</form>
